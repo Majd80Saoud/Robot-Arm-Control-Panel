@@ -1,7 +1,6 @@
 # Robot-Arm-Control-Panel
 This project is a web-based interface for controlling a 6-DOF robot arm using sliders. Users can save motor positions, load them, execute them in real-time, and manage poses through a database.
 
-⸻
 
 ### Features
  • Control 6 servo motors using HTML sliders.
@@ -11,7 +10,6 @@ This project is a web-based interface for controlling a 6-DOF robot arm using sl
  • Responsive and simple UI.
  • Backend built with PHP and MySQL.
 
-⸻
 
 ### Technologies Used
  • Frontend: HTML, CSS, JavaScript
