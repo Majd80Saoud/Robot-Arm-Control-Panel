@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robot Arm Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadTable()">
+  <h2>Robot Arm Control Panel</h2>
+
+  <div class="slider-wrapper">
+    <!-- Sliders -->
+    <div class="slider-container">
+      <label for="motor1">Motor 1</label>
+      <input type="range" id="motor1" min="0" max="180" value="90" oninput="updateValue(0, this.value)">
+      <span id="value1">90</span>
+    </div>
+    <div class="slider-container">
+      <label for="motor2">Motor 2</label>
+      <input type="range" id="motor2" min="0" max="180" value="90" oninput="updateValue(1, this.value)">
+      <span id="value2">90</span>
+    </div>
+    <div class="slider-container">
+      <label for="motor3">Motor 3</label>
+      <input type="range" id="motor3" min="0" max="180" value="90" oninput="updateValue(2, this.value)">
+      <span id="value3">90</span>
+    </div>
+    <div class="slider-container">
+      <label for="motor4">Motor 4</label>
+      <input type="range" id="motor4" min="0" max="180" value="90" oninput="updateValue(3, this.value)">
+      <span id="value4">90</span>
+    </div>
+    <div class="slider-container">
+      <label for="motor5">Motor 5</label>
+      <input type="range" id="motor5" min="0" max="180" value="90" oninput="updateValue(4, this.value)">
+      <span id="value5">90</span>
+    </div>
+    <div class="slider-container">
+      <label for="motor6">Motor 6</label>
+      <input type="range" id="motor6" min="0" max="180" value="90" oninput="updateValue(5, this.value)">
+      <span id="value6">90</span>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button onclick="savePosition()">Save Pose</button>
+    <button onclick="resetSliders()">Reset</button>
+    <button onclick="runSliders()">Run</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Motor 1</th>
+        <th>Motor 2</th>
+        <th>Motor 3</th>
+        <th>Motor 4</th>
+        <th>Motor 5</th>
+        <th>Motor 6</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="positionTable"></tbody>
+  </table>
+
+  <script src="main.js"></script>
+</body>
+</html>
